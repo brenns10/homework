@@ -24,7 +24,7 @@ displayed in the headers of subsequent pages. You can then add
 individual problems and solutions:
 
      \begin{problem}{17}
-	Let $x \in \mathbb{R}$ be some\ldots
+       Let $x \in \mathbb{R}$ be some\ldots
      \end{problem}
 
 If you want to separate your problems into different sections because,
