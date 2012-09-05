@@ -6,11 +6,19 @@ lmaldona (at) reed.edu
 
 My ability to write this style file is due largely to the article
 "Minutes in Less Than Hours: Using LaTeX Resources" by Jim Hefferon,
-in *The PracTeX Journal* (2005), no. 04.
+in *The PracTeX Journal* (2005), no. 04. This represents my first
+attempt at learning and working with the sorts of low-level features
+of LaTeX and TeX that are needed to create document classes, so I
+can't guarantee that the code is well-written or works well in all
+cases... though if it ends up being useful to anyone else, that's
+pretty cool.
+
+This code is distributed under the MIT License. See `COPYING` for
+details.
 
 ## Usage
 
-In the preamble to your document, you can define several variable
+In the preamble to your document, you can define several variables
 containing information pertaining to your assignment:
 
      \student{Random Person}
