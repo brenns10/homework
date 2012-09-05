@@ -30,3 +30,7 @@ individual problems and solutions:
 If you want to separate your problems into different sections because,
 say, they come from different pages or sections of a textbook, just
 use `\problemsection{Chapter 12}` or something similar.
+
+The `example.tex` file contained in this repository is a short
+document that provides a more extensive example of how to use this
+document class.
