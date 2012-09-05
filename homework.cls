@@ -55,6 +55,20 @@
 % Problem environment
 
 \newenvironment{problem}[1]{%
-  \vspace{2ex}\par\noindent\textbf{Problem #1}
+  \vspace{2ex}
+  \par\noindent\textbf{Problem #1}
 }{%
+}
+
+\newcommand{\problemsection}[1]{%
+  \vspace{4ex}
+  \par\noindent\large\textbf{#1}\normalsize
+}
+
+\renewcommand\maketitle{%
+  \par\noindent\large
+  \@student \\
+  \@course\ --- \@assignment \\
+  Due: \@duedate \\
+  \normalsize
 }
