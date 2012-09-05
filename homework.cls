@@ -66,9 +66,11 @@
 }
 
 \renewcommand\maketitle{%
-  \par\noindent\large
-  \@student \\
-  \@course\ --- \@assignment \\
-  Due: \@duedate \\
+  \large
+  \begin{center}
+    \@student \\
+    \@course\ \hspace{0.3in} \@assignment \\
+    Due: \@duedate \\
+  \end{center}
   \normalsize
 }
