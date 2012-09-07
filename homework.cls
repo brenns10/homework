@@ -3,7 +3,7 @@
 % Eddie Maldonado
 % lmaldona@reed.edu
 
-\ProvidesClass{homework}[2012/09/04 Git current version of homework]
+\ProvidesClass{homework}[2012/09/06 Git current version of homework]
 \NeedsTeXFormat{LaTeX2e}
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
@@ -40,9 +40,6 @@
 
 % Variables storing relevant information on the document.
 
-\def\@duedate{\today}
-\newcommand{\duedate}[1]{\def\@duedate{#1}}
-
 \global\let\@student\@empty
 \newcommand{\student}[1]{\def\@student{#1}}
 
@@ -51,6 +48,9 @@
 
 \global\let\@assignment\@empty
 \newcommand{\assignment}[1]{\def\@assignment{#1}}
+
+\global\let\@duedate\@empty
+\newcommand{\duedate}[1]{\def\@duedate{#1}}
 
 % Problem environment
 
@@ -70,7 +70,11 @@
   \begin{center}
     \@student \\
     \@course\ \hspace{0.3in} \@assignment \\
-    Due: \@duedate \\
+    \ifx\@duedate\@empty
+      \relax
+    \else
+      Due: \@duedate \\
+    \fi
   \end{center}
   \normalsize
 }
