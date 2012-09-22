@@ -38,6 +38,10 @@
 \pagestyle{followingpage}
 \AtBeginDocument{\thispagestyle{firstpage}}
 
+% No footnote rule, since it looks bad together with the footer rule.
+
+\renewcommand{\footnoterule}{\relax}
+
 % Variables storing relevant information on the document.
 
 \global\let\@student\@empty
