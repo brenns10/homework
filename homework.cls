@@ -3,7 +3,7 @@
 % Eddie Maldonado
 % lmaldona@reed.edu
 
-\ProvidesClass{homework}[2012/09/22 Git current version of homework]
+\ProvidesClass{homework}[2012/09/26 Git current version of homework]
 \NeedsTeXFormat{LaTeX2e}
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
@@ -12,7 +12,13 @@
 
 \LoadClass{article}
 
+% Page geometry
+
 \RequirePackage[left=1in,right=1in,top=1in,bottom=1in]{geometry}
+
+% Keep page breaks from happening where we don't want them
+
+\RequirePackage{needspace}
 
 % Header and footer style.
 
@@ -57,6 +63,9 @@
 \newcommand{\duedate}[1]{\def\@duedate{#1}}
 
 % Problem environment
+% TODO: Consider somehow using needspace to keep the problem
+% statement, if there is one, on the same page as the problem number
+% and the beginning of the answer.
 
 \newenvironment{problem}[1]{%
   \vspace{2ex}
@@ -64,10 +73,28 @@
 }{%
 }
 
+% Statement command; formats its argument nicely inside of a box as a
+% means of typesetting the statement of a problem, if needed.
+
+\newcommand{\statement}[1]{%
+  \vspace{0.5ex}
+  \dimen@ \textwidth
+  \begin{center}
+    \fbox{\parbox{0.9\dimen@}{#1}}
+  \end{center}
+  \vspace{0.5ex}
+}
+
+% For delimiting different sections or groups of problems, i.e. from
+% different chapters of a book.
+
 \newcommand{\problemsection}[1]{%
   \vspace{4ex}
+  \Needspace*{3\baselineskip}
   \par\noindent\large\textbf{#1}\normalsize
 }
+
+% Format the title with the relevant information.
 
 \renewcommand\maketitle{%
   \large
