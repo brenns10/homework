@@ -3,7 +3,7 @@
 % Eddie Maldonado
 % lmaldona@reed.edu
 
-\ProvidesClass{homework}[2012/09/26 Git current version of homework]
+\ProvidesClass{homework}[2012/10/10 Git current version of homework]
 \NeedsTeXFormat{LaTeX2e}
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
@@ -69,6 +69,7 @@
 
 \newenvironment{problem}[1]{%
   \vspace{2ex}
+  \Needspace*{3\baselineskip}
   \par\noindent\textbf{Problem #1}
 }{%
 }
