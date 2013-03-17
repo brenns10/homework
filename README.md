@@ -2,7 +2,7 @@
 
 By Eddie Maldonado
 
-lmaldona (at) reed.edu
+eddie (ad) lemald (dot) org
 
 My ability to write this style file is due largely to the article
 "Minutes in Less Than Hours: Using LaTeX Resources" by Jim Hefferon,
