@@ -3,8 +3,10 @@
 \course{Math XYZ}
 \assignment{Problem Set 5}
 \duedate{October 9, 2012}
+\usepackage{amsmath}
 \begin{document}
 \maketitle
+
 
 \problemsection{Page XYZ}
 
@@ -27,7 +29,9 @@
 \end{problem}
 
 \begin{problem}{11}
-  \statement{What is $2 + 2$?}
+  \begin{question}
+    What is $2 + 2$?
+  \end{question}
   The answer is $4$. Note that this problem has its statement
   included. Note that, if you begin a new paragraph after issuing the
   \verb+\statement+ command, it will be indented. If you do not want
@@ -41,5 +45,20 @@
   Here's yet another problem. I've manually inserted a page break in
   order to demonstrate the appearance of the header on pages after the
   first.
+\end{problem}
+
+\begin{problem}{25}
+  \begin{question}
+    This is a demonstration of the question environment.  It is basically the
+    same as the statement command, but it is an environment.  The advantage to
+    an environment is that many LaTeX tools cannot cope with math within the
+    statement command argument, but they can cope with it within an environment.
+
+    $\int_0^1 x^2 dx$
+
+  \end{question}
+
+  So, you have the option to use the question environment for long question
+  statements that have a lot of math.
 \end{problem}
 \end{document}

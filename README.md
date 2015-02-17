@@ -1,6 +1,6 @@
 # A LaTeX Class for my Homework Assignments
 
-By Eddie Maldonado
+By Eddie Maldonado (modifications by Stephen Brennan, see below).
 
 eddie (at) lemald (dot) org
 
@@ -49,3 +49,10 @@ on the formatting.
 The `example.tex` file contained in this repository is a short
 document that provides a more extensive example of how to use this
 document class.
+
+## Modifications
+
+The `question` environment has been added to this class so that problem
+statements can occur within an environment rather than a command argument.  I
+added this feature because the AUCTeX previewer gets wildly confused by the
+`\statement` command, but copes with the `question` environment well.

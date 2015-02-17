@@ -1,9 +1,9 @@
 % homework.cls
 % LaTeX document class for homework assignments
-% Eddie Maldonado
+% Eddie Maldonado, modified by Stephen Brennan
 % lmaldona@reed.edu
 
-\ProvidesClass{homework}[2012/10/10 Git current version of homework]
+\ProvidesClass{homework}[2015/01/03 Git current version of homework]
 \NeedsTeXFormat{LaTeX2e}
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
@@ -24,19 +24,24 @@
 
 \RequirePackage{fancyhdr}
 
+% Framing within question environment.
+
+\RequirePackage{tikz}
+\RequirePackage[framemethod=tikz]{mdframed}
+
 \fancypagestyle{firstpage}{%
   \fancyhf{}
-  \fancyfoot[CE,CO]{\thepage}
+  \fancyfoot[C]{\thepage}
   \renewcommand{\headrulewidth}{0pt}
   \renewcommand{\footrulewidth}{0.7pt}
 }
 
 \fancypagestyle{followingpage}{%
   \fancyhf{}
-  \fancyhead[LE,LO]{\@student}
-  \fancyhead[CE,CO]{\@course}
-  \fancyhead[RE,RO]{\@assignment}
-  \fancyfoot[CE,CO]{\thepage}
+  \fancyhead[L]{\@student}
+  \fancyhead[C]{\@course}
+  \fancyhead[R]{\@assignment}
+  \fancyfoot[C]{\thepage}
   \renewcommand{\headrulewidth}{0.7pt}
   \renewcommand{\footrulewidth}{0.7pt}
 }
@@ -85,6 +90,11 @@
   \end{center}
   \vspace{0.5ex}
 }
+
+% Question environment; formats its contents nicely inside of a box as a means
+% of typesetting the statement of a problem, if needed.
+
+\newmdenv[linewidth=0.7pt]{question}
 
 % For delimiting different sections or groups of problems, i.e. from
 % different chapters of a book.
