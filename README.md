@@ -17,6 +17,7 @@ details.
 On Arch Linux, install from the AUR package, `latex-homework-git`.
 
 Anywhere else, there are just three steps:
+
 1. Make a `homework` subdirectory within your LaTeX classes directory.  On Arch
    Linux, that is `/usr/share/texmf-dist/tex/latex/`.
 2. Put `homework.cls` in that subdirectory.
