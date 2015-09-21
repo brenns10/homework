@@ -14,7 +14,8 @@ details.
 
 ## Installation
 
-On Arch Linux, install from the AUR package, `latex-homework-git`.
+On Arch Linux, install from the AUR package,
+[`latex-homework-git`](https://aur.archlinux.org/packages/latex-homework-git).
 
 Anywhere else, there are just three steps:
 
